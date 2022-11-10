@@ -12,6 +12,7 @@
     aria-hidden="true"
     v-bind="$attrs"
   >
+    <title>{{ props.title }}</title>
     <use :xlink:href="iconName" />
   </svg>
 </template>
@@ -23,6 +24,11 @@ const props = defineProps({
     // icon名称（svg文件：svg文件名；外链：外链地址）
     type: String,
     required: true,
+  },
+  // title属性
+  title: {
+    type: String,
+    default: "",
   },
   className: {
     // 额外的类名
